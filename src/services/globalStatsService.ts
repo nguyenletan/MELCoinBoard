@@ -8,7 +8,7 @@ export default class GlobalStatsService extends BaseService<GlobalStats> {
     protected options: any
 
     constructor() {
-        const url = 'https://' + process.env.REACT_APP_RAPID_API_COINRANKING_HOST
+        const url = 'https://' + process.env.REACT_APP_RAPID_API_COINRANKING_HOST;
         super(url + '/stats', {});
         this.options = {
             headers: {
