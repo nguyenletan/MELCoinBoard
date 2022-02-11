@@ -107,9 +107,11 @@ In order to interact with real data the project uses some API endpoints from [Ra
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+*Note: http://cors-anywhere.herokuapp.com/
 
 [home-screenshot]: screenshots/home.png
 [coinDetail-screenshot]: screenshots/coinDetail.png
 [coins-screenshot]: screenshots/coins.png
 [exchanges-screenshot]: screenshots/exchanges.png
 [news-screenshot]: screenshots/news.png
+
