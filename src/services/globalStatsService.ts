@@ -8,11 +8,13 @@ export default class GlobalStatsService extends BaseService<GlobalStats> {
     protected options: any
 
     constructor() {
-        super('https://coinranking1.p.rapidapi.com/stats', {});
+        const url = 'https://' + process.env.REACT_APP_RAPID_API_COINRANKING_HOST
+        super(url + '/stats', {});
         this.options = {
             headers: {
                 'x-rapidapi-host': process.env.REACT_APP_RAPID_API_COINRANKING_HOST,
-                'x-rapidapi-key': process.env.REACT_APP_RAPID_API_COINRANKING_KEY
+                'x-rapidapi-key': process.env.REACT_APP_RAPID_API_COINRANKING_KEY,
+                'x-access-token': 'coinranking4c127e34e915cd478e42e32134a32f4ef8abc2a0384f9c9e'
             }
         }
     }
