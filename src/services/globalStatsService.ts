@@ -9,7 +9,8 @@ export default class GlobalStatsService extends BaseService<GlobalStats> {
 
     constructor() {
         const url = 'https://' + process.env.REACT_APP_RAPID_API_COINRANKING_HOST;
-        super(url + '/stats', {});
+        const proxyUrl = process.env.REACT_APP_PROXY_API_SERVER;
+        super(proxyUrl + url + '/stats', {});
         this.options = {
             headers: {
                 'x-rapidapi-host': process.env.REACT_APP_RAPID_API_COINRANKING_HOST,

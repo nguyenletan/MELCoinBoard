@@ -9,7 +9,8 @@ export default class CoinDetailService extends BaseService<CoinDetail> {
 
     constructor() {
         const url = 'https://' + process.env.REACT_APP_RAPID_API_COINRANKING_HOST;
-        super(url + '/coin', { timePeriod: '3h' });
+        const proxyUrl = process.env.REACT_APP_PROXY_API_SERVER;
+        super(proxyUrl + url + '/coin', { timePeriod: '3h' });
         this.options = {
             headers: {
                 'x-rapidapi-host': process.env.REACT_APP_RAPID_API_COINRANKING_HOST,

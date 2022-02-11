@@ -1,5 +1,5 @@
-import { mergeMap, Observable, of, throwError } from "rxjs";
-import { fromFetch } from 'rxjs/fetch';
+import {mergeMap, Observable, of, throwError} from "rxjs";
+import {fromFetch} from 'rxjs/fetch';
 import CurrencyRef from "../models/currencyRef";
 import BaseService from "./baseService";
 
@@ -9,7 +9,8 @@ export default class CurrenciesRefService extends BaseService<CurrencyRef[]> {
 
     constructor() {
         const url = 'https://' + process.env.REACT_APP_RAPID_API_COINRANKING_HOST;
-        super(url + '/reference-currencies', { types: 'fiat', limit: '20', offset: '0' });
+        const proxyUrl = process.env.REACT_APP_PROXY_API_SERVER;
+        super(proxyUrl + url + '/reference-currencies', { types: 'fiat', limit: '20', offset: '0' });
         this.options = {
             headers: {
                 'x-rapidapi-host': process.env.REACT_APP_RAPID_API_COINRANKING_HOST,

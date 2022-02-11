@@ -12,7 +12,8 @@ export default class CoinsService extends BaseService<Coin[]>{
         //coinranking1.p.rapidapi.com
         //https://coinranking1.p.rapidapi.com/coins
         const url = 'https://' + process.env.REACT_APP_RAPID_API_COINRANKING_HOST;
-        super(url + '/coins', {
+        const proxyUrl = process.env.REACT_APP_PROXY_API_SERVER;
+        super(proxyUrl + url + '/coins', {
             referenceCurrencyUuid: 'yhjMzLPhuIDl',
             timePeriod: '3h',
             tiers: '1',
