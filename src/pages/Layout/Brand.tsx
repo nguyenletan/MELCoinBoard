@@ -7,7 +7,7 @@ function Brand() {
     return (
         <ButtonBase component={Link} to={''}>
             <Typography variant="h5" noWrap component="h1" style={{ fontWeight: 800, marginRight: '1.5rem' }}>
-                <span style={{ color: theme.palette.primary.dark }}>MEL</span><span style={{ color: theme.palette.secondary.dark }}>Coin</span><span style={{ color: theme.palette.primary.light }}>Board</span>
+                <span style={{ color: theme.palette.primary.dark }}>MEL</span><span style={{ color: theme.palette.secondary.dark }}>Coin</span><span style={{ color: theme.palette.success.light }}>Board</span>
             </Typography>
         </ButtonBase>
     );

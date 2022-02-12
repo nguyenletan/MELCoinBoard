@@ -10,7 +10,7 @@ import '@fontsource/roboto/700.css';
 import {Provider} from 'react-redux';
 import store from './store';
 import {BrowserRouter} from 'react-router-dom';
-import {green} from '@mui/material/colors';
+import {green,yellow} from '@mui/material/colors';
 import {createTheme, ThemeProvider} from '@mui/material/styles';
 
 const theme = createTheme({
@@ -18,6 +18,9 @@ const theme = createTheme({
         primary: {
             main: green[800],
         },
+        secondary: {
+            main: yellow[500]
+        }
     },
 });
 
