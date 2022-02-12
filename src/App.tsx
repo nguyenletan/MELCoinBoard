@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
@@ -9,7 +9,15 @@ import News from './pages/News';
 import CoinDetail from './pages/CoinDetail';
 
 
+
 function App() {
+  useEffect(() => {
+    fetch('https://db.pokemongohub.net/api/pokemon/with-type/ghost?locale=en-US').then(x => x.json()).then(x => {
+      console.log(x)
+      return x;
+    })
+  }, []);
+
   return (
     <Layout>
       <Routes>
