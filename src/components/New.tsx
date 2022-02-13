@@ -1,7 +1,7 @@
 import React from 'react';
 import NewsModel from '../models/news';
 import { ButtonBase, Card, CardActions, CardContent, CardMedia, Grid, Typography } from '@mui/material';
-import { formatDistanceToNow } from 'date-fns';
+// import { formatDistanceToNow } from 'date-fns';
 
 interface Props {
     newz: NewsModel;
