@@ -25,7 +25,7 @@ function New({ newz }: Props) {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <Typography noWrap variant='caption' flexGrow={1}>{formatDistanceToNow(new Date(newz.published_date), { addSuffix: true })}</Typography>
+                        {/*<Typography noWrap variant='caption' flexGrow={1}>{formatDistanceToNow(new Date(newz.published_date), { addSuffix: true })}</Typography>*/}
                         {newz.author && <Typography noWrap variant='caption'>@{newz.author}</Typography>}
                     </CardActions>
                 </Card>
